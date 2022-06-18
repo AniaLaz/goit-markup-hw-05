@@ -722,7 +722,7 @@ img {
     letter-spacing: 0.03em;
     color: var(--portfolio-button-color);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), colbox-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:not(:last-child) {
@@ -775,8 +775,6 @@ img {
     letter-spacing: 0.06em;
 
     color: var(--second-title-color);
-
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery-link-text {
@@ -793,6 +791,8 @@ img {
 
 .gallery-item-link {
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .gallery-top-wrap {
@@ -819,11 +819,15 @@ img {
     color: #FFFFFF;
     background-color: rgba(33, 150, 243, 0.9);
 
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow: auto;
 }
 
 .gallery-item:hover .gallery-top-text {
+    transform: translateY(0);
+}
+
+.gallery-item-link:focus .gallery-top-text {
     transform: translateY(0);
 }
